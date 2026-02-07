@@ -6,7 +6,7 @@ import { STYLES } from './utils/constants';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import VideoFeed from './components/Camera/VideoFeed';
-import Overlay from './components/Camera/Overlay';
+import Overlay from './components/Camera/OverLay';
 import ButtonGroup from './components/Controls/ButtonGroup';
 import EmotionBar from './components/Controls/EmotionBar';
 
@@ -27,7 +27,7 @@ const App = () => {
   // 3. Función de Detección 
   const detectEmotions = async () => {
     const { faceapi } = window;
-    
+
     // Determinar si se analiza video o imagen
     const isImage = !!imageSrc;
     const input = isImage ? imgRef.current : videoRef.current;
